@@ -6,11 +6,9 @@ export default (): Config => ({
     host: process.env.APP_HOST || '0.0.0.0',
   },
   database: {
-    port: parseInt(process.env.MYSQL_PORT) || 3306,
-    host: process.env.MYSQL_HOST,
-    user: process.env.MYSQL_USER,
-    password: process.env.MYSQL_PASSWORD,
-    dbName: process.env.MYSQL_DB,
+    port: parseInt(process.env.MONGODB_PORT) || 27017,
+    uri: process.env.MONGODB_URI,
+    user: process.env.MONGODB_USER,
   },
   hashRounds: Number(process.env.HASH_ROUNDS),
   redis: {
